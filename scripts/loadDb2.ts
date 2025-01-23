@@ -38,12 +38,12 @@ const readJsonFiles = async (folder) => {
         const allStrings = [];
         for (const file of jsonFiles) {
             const filePath = path.join(folder, file);
-            console.log(filePath)
+            // console.log(filePath)
 
             // 读取文件内容并解析为 JSON 对象（字符串数组）
             const content = await fs.readFile(filePath, "utf-8");
             const jsonData = JSON.parse(content); // 假设是字符串数组
-            console.log(jsonData)
+            // console.log(jsonData)
             if (Array.isArray(jsonData)) {
                 allStrings.push(...jsonData); // 将数组中的字符串添加到总集合
             } else {
